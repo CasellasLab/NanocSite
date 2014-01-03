@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Casellas Lab Site - <%= @item[:title] %></title>
+
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css">
+	<link rel="stylesheet" href="/assets/css/justified-nav.css">
+	<style>
+	.carousel-inner > .item .carousel-caption > p {
+		text-align: right;
+		color: red;
+	}
+	</style>
+  </head>
+  <body>
+
+  <div class="container">
+	<!-- Navigation Bar and header
+	===================================================  -->
+      <div class="masthead">
+        <h1 class="text-center" style="color: #1c3448;">Casellas Lab</h1>
+        <ul class="nav nav-justified">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/Research/index.html">Research</a></li>
+          <li><a href="/People/index.html">People</a></li>
+          <li><a href="/Publications/index.html">Publications</a></li>
+          <li><a href="/Regulome/index.html">Regulome</a></li>
+          <li class="active"><a href="/Join/index.html">Join</a></li>
+ 		  <li><a href="/Art/index.html">Art</a></li>
+        </ul>
+      </div> <!-- /masthead -->
+
+	<!-- Slideshow
+	===================================================  -->
+
+     <%= yield %>  
+  </div>  <!-- /container -->
+	<!-- Script for change speed of carousel -->
+	<script src="/assets/js/jquery.js"></script>
+	<script src="/assets/js/bootstrap.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src=”http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.js”></script>
+	<script src="/assets/js/holder.js"></script>
+  </body>
+</html>

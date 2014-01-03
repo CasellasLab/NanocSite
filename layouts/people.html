@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Casellas Lab Site - <%= @item[:title] %></title>
+
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css">
+	<link rel="stylesheet" href="/assets/css/justified-nav.css">
+	<style>
+			.container {
+				font-family:"Adobe Garamond Pro";
+				font-size:18px;
+			}
+
+			.smallimg {
+				text-align:left;float: left;
+				height:160px; vertical-align:middle;
+				padding-right: 20px;
+			}
+
+			.smallimgrafa {
+                text-align:left;float: left;
+                width:190px; height:160px; vertical-align:middle; 
+                padding-left: 15px; padding-right: 15px;
+        	}
+			.col-md-6 {
+				vertical-align:middle;
+			}
+			.mybox {
+				20px;border: 1px solid black;border-radius:10px;background:rgb(244,238,224);
+			}
+			.mytextimg {
+				position:absolute;top:40%;left:40%;
+			}
+			.innerleft {
+				position:relative:
+				left:15px;
+			}
+			.row {
+				margin-left:5px;
+				margin-right:5px;
+			}
+	</style> 
+  </head>
+  <body style="background-color: rgb(108,123,139);">
+
+  <div class="container">
+	<!-- Navigation Bar and header
+	===================================================  -->
+      <div class="masthead" style="padding-bottom:0px;">
+        <ul class="nav nav-justified">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/Research/index.html">Research</a></li>
+          <li class="active"><a href="/People/index.html">People</a></li>
+          <li><a href="/Publications/index.html">Publications</a></li>
+          <li><a href="/Regulome/index.html">Regulome</a></li>
+          <li><a href="/Join/index.html">Join</a></li>
+        </ul>
+      </div> <!-- /masthead -->
+
+	<%= yield %>  
+	<!-- Script for change speed of carousel -->
+	<script src="/assets/js/jquery.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="/assets/js/bootstrap.js"></script>
+	<script src=”http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.js”></script>
+<!--	<script src="/assets/js/holder.js"></script> -->
+  </body>
+</html>

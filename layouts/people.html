@@ -5,15 +5,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Casellas Lab Site - <%= @item[:title] %></title>
 
-<!--	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css"> -->
-	<link rel="stylesheet" href="/assets/css/bootstrap.css">	 
-	<link rel="stylesheet" href="/assets/css/justified-nav.css">
-	<link rel="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-	<script src="/assets/js/respond.js"></script>
+        <link rel="stylesheet" href="/assets/css/bootstrap.css" />
+        <link rel="stylesheet" href="/assets/css/justified-nav.css" />
+        <link rel="stylesheet" href="/assets/css/font-awesome.css" />
+        
 	<style>
 			.container {
-				font-family:"Adobe Garamond Pro";
+				font-family:"Palatino Linotype";
 				font-size:18px;
 			}
 
@@ -32,7 +30,7 @@
 				vertical-align:middle;
 			}
 			.mybox {
-				20px;border: 1px solid black;
+				border: 1px solid black;
 				border-radius:10px;
 				-webkit-border-radius: 10px;
 				-moz-border-radius: 10px;
@@ -53,13 +51,18 @@
 			.btn {
 				border: 1px solid grey;
 			}
-	</style> 
+	</style>
+<!-- Enable below scripts for it to work in IE8 (but this breaks it in mobile devices) -->
+<!--[if lt IE 9]>
+      <script src="/assets/js/html5shiv.js"></script>
+<![endif]--> 
+
   </head>
   <body style="background-color: rgb(108,123,139);">
 
   <div class="container"> 
 	<!-- Navigation Bar and header-->
-      <div class="masthead" style="padding-bottom:0px;"> 
+    <!--  <div class="masthead" style="padding-bottom:0px;"> -->
         <ul class="nav nav-justified">
           <li><a href="/index.html">Home</a></li>
           <li><a href="/Research/index.html">Research</a></li>
@@ -68,24 +71,21 @@
           <li><a href="/Regulome/index.html">Regulome</a></li>
           <li><a href="/Join/index.html">Join</a></li>
         </ul>
-      </div> <!-- /masthead -->
+<!--      </div> <!-- /masthead -->
 
 	<%= yield %>  
 
 </div><!-- end container -->
-
-<br><br>        
-</div>
-
-
-	<!-- Script for change speed of carousel -->
-	<script src="/assets/js/jquery.js"></script>
-<!--	<script src="http://code.jquery.com/jquery-latest.js"></script>  -->
-	<script src="/assets/js/bootstrap.js"></script>
-<!--	<script src=”http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.js”></script>  -->
-<!--	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js">-->
-<!--	<script src="/assets/js/holder.js"></script> -->
-	<script src="/assets/js/css3-mediaqueries.js"></script>
-  </body>
+<br><br>
+		<!--[if lt IE 9]>
+			<script src="/assets/js/respond.js"></script>
+			<script src="/assets/js/require.js"></script>
+		<![endif]-->
+        <script src="/assets/js/jquery.js"></script>
+        <script src="/assets/js/bootstrap.js"></script>
+      	<!--[if lt IE 9]>
+		     <script src="/assets/js/css3-mediaqueries.js"></script>
+ 		<![endif]-->
+	</body>
 </html>
 

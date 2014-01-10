@@ -2,17 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Casellas Lab Site - <%= @item[:title] %></title>
 
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css">
-	<link rel="stylesheet" href="/assets/css/justified-nav.css">
+        <link rel="stylesheet" href="/assets/css/bootstrap.css" />
+        <link rel="stylesheet" href="/assets/css/justified-nav.css" />
+        <link rel="stylesheet" href="/assets/css/font-awesome.css" />
+
 	<style>
 	.container {
-		font-family:"Adobe Garamond Pro";
+		font-family:"Palatino Linotype";
 		font-size:18px;
+	}
+	.mymid {
+		margin:0 auto;
 	}
 }
 	</style> 
+
+<!--[if lt IE 9]>
+      <script src="/assets/js/html5shiv.js"></script>
+      <script src="/assets/js/respond.js"></script>  
+<![endif]--> 
+
   </head>
   <body style="background-color: rgb(108,123,139);">
 
@@ -37,12 +49,17 @@
 </div> <!-- end container -->
 <br><br>        
 </div>
-	<!-- Script for change speed of carousel -->
-	<script src="/assets/js/jquery.js"></script>
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="/assets/js/bootstrap.js"></script>
-	<script src=”http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.js”></script>
-	<script src="/assets/js/response.js"></script>
-<!--	<script src="/assets/js/holder.js"></script> -->
+
+                <!--[if lt IE 9]>
+                        <script src="/assets/js/require.js"></script>
+                <![endif]-->
+        <script src="/assets/js/jquery.js"></script>
+        <script src="/assets/js/bootstrap.js"></script>
+        <!--[if lt IE 9]>
+                     <script src="/assets/js/css3-mediaqueries.js"></script>
+                <![endif]-->
+ 
+
+
   </body>
 </html>

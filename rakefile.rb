@@ -8,6 +8,9 @@ task :publish do
  src = 'output/'
  dst = 'casellaslab.git.io/'
 
+ puts '=== Copy .woff font file (for IE8) into output directory...'
+sh("cp /Users/mathee/Documents/CasellasWeb/glyphicons-halflings-regular.woff output/assets/fonts/")
+
  puts '==== Syncing working directory...'
  sh("rsync -arv --delete --exclude '.git' #{src} #{dst}")
  

@@ -2,13 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Casellas Lab Site - <%= @item[:title] %></title>
 
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css">
-	<link rel="stylesheet" href="/assets/css/justified-nav.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap.css" />
+	<link rel="stylesheet" href="/assets/css/justified-nav.css" />
+	<link rel="stylesheet" href="/assets/css/font-awesome.css" />
+	
 	<style>
 	.container {
-		font-family:"Adobe Garamond Pro";
+		font-family:"Palatino Linotype";
 		font-size:18px;
 	}
 	.carousel-inner > .item .carousel-caption > p {
@@ -25,13 +28,19 @@
 	} */
 }
 	</style> 
-  </head>
+<!-- Enable below scripts for it to work in IE8 (but this breaks it in mobile devices so need conditional statement) -->
+<!--[if lt IE 9]>
+      <script src="/assets/js/html5shiv.js"></script>
+      <script src="/assets/js/respond.js"></script>  
+<![endif]--> 
+
+ </head>
   <body style="background-color: rgb(108,123,139);">
 
-  <div class="container">
+  <div class="container"> <!-- top container -->
 	<!-- Navigation Bar and header
 	===================================================  -->
-      <div class="masthead" style="padding-bottom:0px;">
+<!--      <div class="masthead" style="padding-bottom:0px;"> -->
         <ul class="nav nav-justified">
           <li class="active"><a href="/index.html">Home</a></li>
           <li><a href="/Research/index.html" data-toggle="tooltip">Research</a></li>
@@ -40,33 +49,27 @@
           <li><a href="/Regulome/index.html">Regulome</a></li>
           <li><a href="/Join/index.html">Join</a></li>
         </ul>
-      </div> <!-- /masthead -->
+<!--      </div> <!-- /masthead -->
 
 	<!-- Slideshow
 	===================================================  -->
 	<%= yield %>  
-	<!-- Script for change speed of carousel -->
 
-  	<div class="nav nav-justified" style="background-color:white;max-height:48px;">
-		 <div class="col-md-4 border">
-        	<a href="http://www.nih.gov"><img src="/images/NIHlogo.jpg" style="max-height:40px;padding-top:5px;"/></a>
-		 </div>
-		 <div class="col-md-4">
-			<a href="http://www.niams.nih.gov"><img src="/images/NIAMSlogo.jpg" style="max-height:40px;padding-top:5px;"/></a>	
-		 </div>
-			<li style="background-color:white;"><a class="nav-justified" href="/Disclaimer/index.html" style="color:white;max-height:48px;">Disclaimer</a></li>
-		 </div>
-	</div><!-- end row -->
+	<ul class="nav nav-justified"">
+		<li><a href="http://www.nih.gov" style="background:white;"><img src="/images/NIHlogo.jpg" style="height:100%;width:70%;" /></a></li>
+		<li style="background:white;"><a href="http://www.niams.nih.gov" style="background:white;"><img src="/images/NIAMSlogo.jpg" style="height:55%;width:55%;padding-top:2%;"/></a></li>
+		<li style="background:white;"><a href="/Disclaimer/index.html" style="background:white;color:black;padding:0;">Disclaimer</a></li>
+	</ul>
 
-</div> <!-- end container -->
+</div> <!-- end top container -->
 <br><br>	
-</div>
-
-	<script src="/assets/js/jquery.js"></script>
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="/assets/js/bootstrap.js"></script>
-	<script src=”http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.js”></script>
-	<script src="/assets/js/respond.js"></script>
-<!--	<script src="/assets/js/holder.js"></script> -->
+        <!--[if lt IE 9]>
+               <script src="/assets/js/require.js"></script>
+        <![endif]-->
+        <script src="/assets/js/jquery.js"></script>
+        <script src="/assets/js/bootstrap.js"></script>
+        <!--[if lt IE 9]>
+               <script src="/assets/js/css3-mediaqueries.js"></script>
+        <![endif]-->
   </body>
 </html>
